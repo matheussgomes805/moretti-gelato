@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moretti Gelato Stock</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Moretti Gelato Stock</h1>
+    </header>
+
+    <main>
+      <h2>Registrar movimiento</h2>
+
+      <div>
+        <div class="campo">
+          <label for="tipo-movimiento">Tipo de movimiento</label>
+          <select name="tipo-movimiento" id="tipo-movimiento">
+            <option value="" selected disabled>
+              Selecciona el tipo de movimiento
+            </option>
+            <option value="entrada">Entrada</option>
+            <option value="salida">Salida</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="producto">Producto</label>
+          <select name="producto" id="producto">
+            <option value="">x</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="lote">Lote</label>
+          <input type="text" name="lote" id="lote" />
+        </div>
+
+        <div class="campo">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" name="cantidad" id="cantidad" />
+        </div>
+
+        <button>REGISTRAR MOVIMIENTO</button>
+        <a href="index.html">CANCELAR</a>
+      </div>
+    </main>
+  </body>
+</html>
