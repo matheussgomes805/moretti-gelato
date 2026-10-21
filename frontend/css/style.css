@@ -21,31 +21,28 @@ header {
   color: var(--fuente);
   padding: 15px;
   margin-bottom: 30px;
+}
+
+.cabecera-superior {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 20px;
 }
 
-header a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
 nav ul {
+  list-style: none;
   display: none;
 }
 
 nav ul.menu-abierto {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
 nav a {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
