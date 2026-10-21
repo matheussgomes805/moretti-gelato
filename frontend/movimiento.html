@@ -8,9 +8,33 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
+      <nav>
+        <button aria-label="abrir menu" aria-expanded="false" id="boton-menu">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+
+        <ul id="menu-navegacion">
+          <li>
+            <a href="index.html">
+              <span class="material-symbols-outlined"> swap_horiz </span>
+              Movimientos de stock</a
+            >
+          </li>
+
+          <li>
+            <a href="productos.html"
+              ><span class="material-symbols-outlined"> inventory_2 </span>
+              Listado de productos</a
+            >
+          </li>
+        </ul>
+      </nav>
+
       <h1>Moretti Gelato Stock</h1>
     </header>
 
@@ -50,5 +74,7 @@
         <a href="index.html">CANCELAR</a>
       </div>
     </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
