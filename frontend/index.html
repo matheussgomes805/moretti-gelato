@@ -13,6 +13,8 @@
   </head>
   <body>
     <header>
+      <!--aria-expanded: indica si un elemento puede expandirse-->
+      <!--aria-label: define un nombre o una descripción accesible-->
       <div class="cabecera-superior">
         <button aria-label="abrir menu" aria-expanded="false" id="boton-menu">
           <span class="material-symbols-outlined"> menu </span>
@@ -39,11 +41,12 @@
       </nav>
     </header>
 
+    <div class="overlay"></div>
+
     <main>
       <h2>Movimientos de stock</h2>
 
       <div>
-        <span class="material-symbols-outlined"> swap_horiz </span>
         <a href="movimiento.html">REGISTRAR MOVIMIENTO</a>
 
         <h3>Historial</h3>
