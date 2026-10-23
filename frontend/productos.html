@@ -44,12 +44,18 @@
     <main>
       <h2>Listado de productos</h2>
 
-      <div>
-        <a href="nuevo-producto.html" class="boton">AÑADIR PRODUCTO</a>
+      <a href="nuevo-producto.html" class="botonAzul">AÑADIR PRODUCTO</a>
 
-        <span class="material-symbols-outlined"> search </span>
-        <input type="search" name="buscar" id="buscar" placeholder="Buscar" />
-
+      <section class="info">
+        <div class="busqueda">
+          <span class="material-symbols-outlined"> search </span>
+          <input
+            type="text"
+            name="campo-busqueda"
+            id="campo-busqueda"
+            placeholder="Buscar"
+          />
+        </div>
         <table>
           <thead>
             <tr>
@@ -58,7 +64,7 @@
             </tr>
           </thead>
         </table>
-      </div>
+      </section>
     </main>
 
     <script src="js/script.js"></script>

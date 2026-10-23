@@ -105,4 +105,67 @@ main {
   padding: 10px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.274);
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.botonAzul {
+  text-decoration: none;
+  background-color: var(--botonAzul);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.274);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.botonAzul:hover {
+  background-color: #105cb5;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.busqueda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 8px 16px 8px 8px;
+  width: 100%;
+}
+
+.busqueda > .material-symbols-outlined {
+  color: var(--fuente);
+}
+
+.busqueda > input {
+  border: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.busqueda > input:focus {
+  outline: none;
+}
+
+.busqueda > input::placeholder {
+  font-size: 15px;
+}
+
+.busqueda .material-symbols-outlined {
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
 }
