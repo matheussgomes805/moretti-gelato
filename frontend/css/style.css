@@ -88,6 +88,7 @@ nav a {
   padding: 10px;
   color: var(--fuente);
   transition: 0.2s;
+  border-radius: 5px;
 }
 
 nav a .material-symbols-outlined {
@@ -96,7 +97,6 @@ nav a .material-symbols-outlined {
 
 nav a:hover {
   background-color: var(--hover);
-  border-radius: 5px;
 }
 
 main {
@@ -111,6 +111,10 @@ main {
   gap: 20px;
 }
 
+main h2 {
+  font-size: 1.3em;
+}
+
 .botonAzul {
   text-decoration: none;
   background-color: var(--botonAzul);
@@ -120,10 +124,15 @@ main {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.274);
   font-weight: 500;
   transition: 0.2s;
+  font-size: 0.9em;
 }
 
 .botonAzul:hover {
   background-color: #105cb5;
+}
+
+section h3 {
+  font-size: 1.1em;
 }
 
 .info {
@@ -151,7 +160,7 @@ main {
 .busqueda > input {
   border: none;
   width: 100%;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .busqueda > input:focus {
