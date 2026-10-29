@@ -17,7 +17,9 @@
         <button aria-label="abrir menu" aria-expanded="false" id="boton-menu">
           <span class="material-symbols-outlined"> menu </span>
         </button>
-        <h1>Moretti Gelato Stock</h1>
+        <a href="index.html" class="pantalla-principal">
+          <h1>Moretti Gelato Stock</h1>
+        </a>
       </div>
 
       <nav>
@@ -44,45 +46,43 @@
     <main>
       <h2>Nuevo producto</h2>
 
-      <div class="campo">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" />
-      </div>
-
-      <div class="campo">
-        <label for="tipo-producto">Tipo de producto</label>
-        <select name="tipo-producto" id="tipo-producto">
-          <option value="" selected disabled>Selecciona una categoría</option>
-          <option value="helado">Helado</option>
-          <option value="sorbete">Sorbete</option>
-          <option value="lacteo">Lácteo</option>
-          <option value="ingrediente">Ingrediente</option>
-          <option value="topping">Topping</option>
-          <option value="envase">Envase</option>
-          <option value="utensilio">Utensilio</option>
-          <option value="consumible">Consumible</option>
-          <option value="bebida">Bebida</option>
-        </select>
-      </div>
-
-      <div class="campo">
-        <label for="formato-producto">Formato/contenido</label>
-
-        <input
-          type="text"
-          name="formato-producto"
-          id="formato-producto"
-          placeholder="Ej. 330"
-        />
-
-        <select name="unidad-medida" id="unidad-medida">
-          <option value="ud">ud.</option>
-          <option value="kg">kg</option>
-          <option value="g">g</option>
-          <option value="L">L</option>
-          <option value="ml">ml</option>
-          <option value="paquete">paquete</option>
-        </select>
+      <div class="formulario-producto">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" />
+        </div>
+        <div class="campo">
+          <label for="tipo-producto">Tipo de producto</label>
+          <select name="tipo-producto" id="tipo-producto">
+            <option value="" selected disabled>Selecciona una categoría</option>
+            <option value="helado">Helado</option>
+            <option value="sorbete">Sorbete</option>
+            <option value="lacteo">Lácteo</option>
+            <option value="ingrediente">Ingrediente</option>
+            <option value="topping">Topping</option>
+            <option value="envase">Envase</option>
+            <option value="utensilio">Utensilio</option>
+            <option value="consumible">Consumible</option>
+            <option value="bebida">Bebida</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="formato-producto">Formato/contenido</label>
+          <input
+            type="text"
+            name="formato-producto"
+            id="formato-producto"
+            placeholder="Ej. 330"
+          />
+          <select name="unidad-medida" id="unidad-medida">
+            <option value="ud">ud.</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="L">L</option>
+            <option value="ml">ml</option>
+            <option value="paquete">paquete</option>
+          </select>
+        </div>
       </div>
 
       <button>GUARDAR</button>

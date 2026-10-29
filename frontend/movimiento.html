@@ -17,7 +17,9 @@
         <button aria-label="abrir menu" aria-expanded="false" id="boton-menu">
           <span class="material-symbols-outlined"> menu </span>
         </button>
-        <h1>Moretti Gelato Stock</h1>
+        <a href="index.html" class="pantalla-principal">
+          <h1>Moretti Gelato Stock</h1>
+        </a>
       </div>
 
       <nav>
@@ -44,23 +46,24 @@
     <main>
       <h2>Registrar movimiento</h2>
 
-      <div>
+      <div class="formulario-movimiento">
         <div class="campo">
           <label for="tipo-movimiento">Tipo de movimiento</label>
-          <select name="tipo-movimiento" id="tipo-movimiento">
-            <option value="" selected disabled>
-              Selecciona el tipo de movimiento
-            </option>
-            <option value="entrada">Entrada</option>
-            <option value="salida">Salida</option>
-          </select>
+          <div id="entrada-salida">
+            <button>Entrada</button>
+            <button class="seleccionado">Salida</button>
+          </div>
         </div>
 
         <div class="campo">
           <label for="producto">Producto</label>
-          <select name="producto" id="producto">
-            <option value="">x</option>
-          </select>
+          <div class="select-contenedor">
+            <select name="producto" id="producto">
+              <option value="" selected disabled>Selecciona un producto</option>
+            </select>
+
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </div>
         </div>
 
         <div class="campo">
@@ -70,12 +73,12 @@
 
         <div class="campo">
           <label for="cantidad">Cantidad</label>
-          <input type="number" name="cantidad" id="cantidad" />
+          <input type="number" name="cantidad" id="cantidad" min="0" step="1" />
         </div>
-
-        <button>REGISTRAR MOVIMIENTO</button>
-        <a href="index.html">CANCELAR</a>
       </div>
+
+      <button class="boton-registrar-movimiento">REGISTRAR MOVIMIENTO</button>
+      <a href="index.html" class="boton-cancelar">CANCELAR</a>
     </main>
 
     <script src="js/script.js"></script>

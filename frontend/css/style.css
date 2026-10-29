@@ -52,6 +52,11 @@ header:has(nav ul.menu-abierto) {
   font-size: 1.5em;
 }
 
+.pantalla-principal {
+  text-decoration: none;
+  color: inherit;
+}
+
 .cabecera-superior button {
   border: none;
   cursor: pointer;
@@ -177,4 +182,114 @@ section h3 {
 
 table {
   width: 100%;
+}
+
+.formulario-movimiento {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formulario-movimiento .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formulario-movimiento > .campo > label {
+  font-weight: 500;
+}
+
+.formulario-movimiento input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font: inherit;
+}
+
+#entrada-salida {
+  display: flex;
+  gap: 5px;
+}
+
+#entrada-salida button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+  background-color: var(--gris);
+  color: var(--fuente);
+  font-family: inherit;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+#entrada-salida button.seleccionado {
+  background-color: var(--botonAzul);
+  color: white;
+  border-color: var(--botonAzul);
+}
+
+.formulario-movimiento input,
+.formulario-movimiento select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  font: inherit;
+  color: inherit;
+}
+
+.formulario-movimiento input:focus,
+.formulario-movimiento select:focus {
+  outline: none;
+}
+
+.select-contenedor {
+  position: relative;
+  width: 100%;
+}
+
+.select-contenedor select {
+  appearance: none;
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.select-contenedor .material-symbols-outlined {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.boton-registrar-movimiento {
+  width: 100%;
+  background-color: var(--botonAzul);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 0.9em;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.boton-cancelar {
+  width: 100%;
+  color: var(--botonAzul);
+  font-weight: 500;
+  font-size: 0.9em;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 5px;
 }

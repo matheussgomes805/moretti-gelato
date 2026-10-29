@@ -1,6 +1,7 @@
 const menu = document.getElementById("boton-menu");
 const navegacion = document.getElementById("menu-navegacion");
 const overlay = document.querySelector(".overlay");
+const botones = document.querySelectorAll("#entrada-salida button");
 
 //ABRIR Y CERRAR EL MENU
 menu.addEventListener("click", function () {
@@ -28,4 +29,15 @@ overlay.addEventListener("click", function () {
   menu.setAttribute("aria-label", "abrir menu");
   menu.innerHTML = '<span class="material-symbols-outlined">menu</span>';
   overlay.style.display = "none";
+});
+
+//BOTÓN DE ENTRADA Y SALIDA DE PRODUCTOS
+botones.forEach(function (boton) {
+  boton.addEventListener("click", function () {
+    botones.forEach(function (b) {
+      b.classList.remove("seleccionado");
+    });
+
+    boton.classList.add("seleccionado");
+  });
 });
