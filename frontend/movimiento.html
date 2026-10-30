@@ -46,38 +46,53 @@
     <main>
       <h2>Registrar movimiento</h2>
 
-      <div class="formulario-movimiento">
+      <p class="nota-obligatorio">
+        <span class="obligatorio">*</span> Campos obligatorios
+      </p>
+
+      <form action="#" class="formulario-movimiento">
         <div class="campo">
-          <label for="tipo-movimiento">Tipo de movimiento</label>
+          <label for="tipo-movimiento"
+            >Tipo de movimiento <span class="obligatorio">*</span></label
+          >
           <div id="entrada-salida">
-            <button>Entrada</button>
-            <button class="seleccionado">Salida</button>
+            <button type="button">Entrada</button>
+            <button type="button" class="seleccionado">Salida</button>
           </div>
         </div>
-
         <div class="campo">
-          <label for="producto">Producto</label>
+          <label for="producto"
+            >Producto <span class="obligatorio">*</span></label
+          >
           <div class="select-contenedor">
-            <select name="producto" id="producto">
+            <select name="producto" id="producto" required>
               <option value="" selected disabled>Selecciona un producto</option>
             </select>
-
             <span class="material-symbols-outlined"> keyboard_arrow_down </span>
           </div>
         </div>
-
         <div class="campo">
           <label for="lote">Lote</label>
           <input type="text" name="lote" id="lote" />
         </div>
-
         <div class="campo">
-          <label for="cantidad">Cantidad</label>
-          <input type="number" name="cantidad" id="cantidad" min="0" step="1" />
+          <label for="cantidad"
+            >Cantidad <span class="obligatorio">*</span></label
+          >
+          <input
+            type="number"
+            name="cantidad"
+            id="cantidad"
+            min="0"
+            step="1"
+            required
+          />
         </div>
-      </div>
+      </form>
 
-      <button class="boton-registrar-movimiento">REGISTRAR MOVIMIENTO</button>
+      <button type="submit" class="boton-registrar-movimiento">
+        REGISTRAR MOVIMIENTO
+      </button>
       <a href="index.html" class="boton-cancelar">CANCELAR</a>
     </main>
 

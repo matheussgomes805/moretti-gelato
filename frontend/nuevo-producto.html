@@ -46,47 +46,68 @@
     <main>
       <h2>Nuevo producto</h2>
 
-      <div class="formulario-producto">
-        <div class="campo">
-          <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre" />
-        </div>
-        <div class="campo">
-          <label for="tipo-producto">Tipo de producto</label>
-          <select name="tipo-producto" id="tipo-producto">
-            <option value="" selected disabled>Selecciona una categoría</option>
-            <option value="helado">Helado</option>
-            <option value="sorbete">Sorbete</option>
-            <option value="lacteo">Lácteo</option>
-            <option value="ingrediente">Ingrediente</option>
-            <option value="topping">Topping</option>
-            <option value="envase">Envase</option>
-            <option value="utensilio">Utensilio</option>
-            <option value="consumible">Consumible</option>
-            <option value="bebida">Bebida</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label for="formato-producto">Formato/contenido</label>
-          <input
-            type="text"
-            name="formato-producto"
-            id="formato-producto"
-            placeholder="Ej. 330"
-          />
-          <select name="unidad-medida" id="unidad-medida">
-            <option value="ud">ud.</option>
-            <option value="kg">kg</option>
-            <option value="g">g</option>
-            <option value="L">L</option>
-            <option value="ml">ml</option>
-            <option value="paquete">paquete</option>
-          </select>
-        </div>
-      </div>
+      <p class="nota-obligatorio">
+        <span class="obligatorio">*</span> Campos obligatorios
+      </p>
 
-      <button>GUARDAR</button>
-      <a href="productos.html" class="boton">CANCELAR</a>
+      <form action="#" class="formulario-producto">
+        <div class="campo">
+          <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+          <input type="text" name="nombre" id="nombre" required />
+        </div>
+        <div class="campo">
+          <label for="tipo-producto"
+            >Tipo de producto <span class="obligatorio">*</span></label
+          >
+          <div class="select-contenedor">
+            <select name="tipo-producto" id="tipo-producto" required>
+              <option value="" selected disabled>
+                Selecciona una categoría
+              </option>
+              <option value="helado">Helado</option>
+              <option value="sorbete">Sorbete</option>
+              <option value="lacteo">Lácteo</option>
+              <option value="ingrediente">Ingrediente</option>
+              <option value="topping">Topping</option>
+              <option value="envase">Envase</option>
+              <option value="utensilio">Utensilio</option>
+              <option value="consumible">Consumible</option>
+              <option value="bebida">Bebida</option>
+            </select>
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="formato-producto"
+            >Cantidad y unidad <span class="obligatorio">*</span></label
+          >
+          <div id="formato-contenido">
+            <input
+              type="text"
+              name="formato-producto"
+              id="formato-producto"
+              placeholder="Ej. 12"
+              required
+            />
+            <div class="select-contenedor">
+              <select name="unidad-medida" id="unidad-medida" required>
+                <option value="ud">ud.</option>
+                <option value="kg">kg</option>
+                <option value="g">g</option>
+                <option value="L">L</option>
+                <option value="ml">ml</option>
+                <option value="paquete">paquete</option>
+              </select>
+              <span class="material-symbols-outlined">
+                keyboard_arrow_down
+              </span>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <button type="submit" class="guardar-nuevo-producto">GUARDAR</button>
+      <a href="productos.html" class="boton-cancelar">CANCELAR</a>
     </main>
 
     <script src="js/script.js"></script>

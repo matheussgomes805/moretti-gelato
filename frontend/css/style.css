@@ -5,7 +5,7 @@
   --hover: #e9edf2;
   --fuente: #222222;
   --botonAzul: #1672d9;
-  --botonRojo: #dc4545;
+  --rojo: #dc4545;
 }
 
 * {
@@ -94,6 +94,7 @@ nav a {
   color: var(--fuente);
   transition: 0.2s;
   border-radius: 5px;
+  font-weight: 500;
 }
 
 nav a .material-symbols-outlined {
@@ -126,7 +127,6 @@ main h2 {
   color: white;
   padding: 12px 20px;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.274);
   font-weight: 500;
   transition: 0.2s;
   font-size: 0.9em;
@@ -184,20 +184,44 @@ table {
   width: 100%;
 }
 
-.formulario-movimiento {
+.nota-obligatorio {
+  color: var(--fuente);
+  font-size: 0.85em;
+}
+
+.obligatorio {
+  color: var(--rojo);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.formulario-movimiento,
+.formulario-producto {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.formulario-movimiento .campo {
+.formulario-movimiento .campo,
+.formulario-producto .campo {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.formulario-movimiento > .campo > label {
+#formato-contenido {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 5px;
+}
+
+#formato-contenido select {
+  background-color: var(--gris);
+}
+
+.formulario-movimiento > .campo > label,
+.formulario-producto .campo > label {
   font-weight: 500;
 }
 
@@ -234,7 +258,9 @@ table {
 }
 
 .formulario-movimiento input,
-.formulario-movimiento select {
+.formulario-movimiento select,
+.formulario-producto input,
+.formulario-producto select {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -244,7 +270,9 @@ table {
 }
 
 .formulario-movimiento input:focus,
-.formulario-movimiento select:focus {
+.formulario-movimiento select:focus,
+.formulario-producto input:focus,
+.formulario-producto select:focus {
   outline: none;
 }
 
@@ -270,7 +298,8 @@ table {
   pointer-events: none;
 }
 
-.boton-registrar-movimiento {
+.boton-registrar-movimiento,
+.guardar-nuevo-producto {
   width: 100%;
   background-color: var(--botonAzul);
   color: white;
