@@ -61,6 +61,7 @@ header:has(nav ul.menu-abierto) {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  color: var(--fuente);
   display: flex;
   justify-content: center;
   align-items: center;
