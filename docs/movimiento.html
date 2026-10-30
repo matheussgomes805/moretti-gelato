@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moretti Gelato Stock</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="cabecera-superior">
+        <button aria-label="abrir menu" aria-expanded="false" id="boton-menu">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+        <a href="index.html" class="pantalla-principal">
+          <h1>Moretti Gelato Stock</h1>
+        </a>
+      </div>
+
+      <nav>
+        <ul id="menu-navegacion">
+          <li>
+            <a href="index.html">
+              <span class="material-symbols-outlined"> swap_horiz </span>
+              Movimientos de stock</a
+            >
+          </li>
+
+          <li>
+            <a href="productos.html"
+              ><span class="material-symbols-outlined"> inventory_2 </span>
+              Listado de productos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="overlay"></div>
+
+    <main>
+      <h2>Registrar movimiento</h2>
+
+      <p class="nota-obligatorio">
+        <span class="obligatorio">*</span> Campos obligatorios
+      </p>
+
+      <form action="#" class="formulario-movimiento">
+        <div class="campo">
+          <label for="tipo-movimiento"
+            >Tipo de movimiento <span class="obligatorio">*</span></label
+          >
+          <div id="entrada-salida">
+            <button type="button">Entrada</button>
+            <button type="button" class="seleccionado">Salida</button>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="producto"
+            >Producto <span class="obligatorio">*</span></label
+          >
+          <div class="select-contenedor">
+            <select name="producto" id="producto" required>
+              <option value="" selected disabled>Selecciona un producto</option>
+            </select>
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="lote">Lote</label>
+          <input type="text" name="lote" id="lote" />
+        </div>
+        <div class="campo">
+          <label for="cantidad"
+            >Cantidad <span class="obligatorio">*</span></label
+          >
+          <input
+            type="number"
+            name="cantidad"
+            id="cantidad"
+            min="0"
+            step="1"
+            required
+          />
+        </div>
+      </form>
+
+      <button type="submit" class="boton-registrar-movimiento">
+        REGISTRAR MOVIMIENTO
+      </button>
+      <a href="index.html" class="boton-cancelar">CANCELAR</a>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

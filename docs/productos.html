@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moretti Gelato Stock</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="cabecera-superior">
+        <button aria-label="abrir menu" aria-expanded="false" id="boton-menu">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+        <a href="index.html" class="pantalla-principal">
+          <h1>Moretti Gelato Stock</h1>
+        </a>
+      </div>
+
+      <nav>
+        <ul id="menu-navegacion">
+          <li>
+            <a href="index.html">
+              <span class="material-symbols-outlined"> swap_horiz </span>
+              Movimientos de stock</a
+            >
+          </li>
+
+          <li>
+            <a href="productos.html"
+              ><span class="material-symbols-outlined"> inventory_2 </span>
+              Listado de productos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="overlay"></div>
+
+    <main>
+      <h2>Listado de productos</h2>
+
+      <a href="nuevo-producto.html" class="botonAzul">AÑADIR PRODUCTO</a>
+
+      <section class="info">
+        <div class="busqueda">
+          <span class="material-symbols-outlined"> search </span>
+          <input
+            type="text"
+            name="campo-busqueda"
+            id="campo-busqueda"
+            placeholder="Buscar"
+          />
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
