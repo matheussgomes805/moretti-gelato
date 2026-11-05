@@ -184,6 +184,13 @@ table {
   width: 100%;
 }
 
+thead th {
+  color: var(--fuente);
+  font-weight: 700;
+  font-size: 0.9em;
+  text-align: center;
+}
+
 .nota-obligatorio {
   color: var(--fuente);
   font-size: 0.85em;
