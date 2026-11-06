@@ -50,7 +50,7 @@
         <span class="obligatorio">*</span> Campos obligatorios
       </p>
 
-      <form action="#" class="formulario-producto">
+      <form action="#" method="post" class="formulario-producto">
         <div class="campo">
           <label for="nombre">Nombre <span class="obligatorio">*</span></label>
           <input type="text" name="nombre" id="nombre" required />
@@ -109,10 +109,12 @@
           >
           <div id="formato-contenido">
             <input
-              type="text"
-              name="formato-producto"
-              id="formato-producto"
+              type="number"
+              name="cantidad-formato"
+              id="cantidad-formato"
               placeholder="Ej. 12"
+              min="0"
+              step="any"
               required
             />
             <div class="select-contenedor">
@@ -129,9 +131,9 @@
             </div>
           </div>
         </div>
+        <button type="submit" class="guardar-nuevo-producto">GUARDAR</button>
       </form>
 
-      <button type="submit" class="guardar-nuevo-producto">GUARDAR</button>
       <a href="productos.html" class="boton-cancelar">CANCELAR</a>
     </main>
 
