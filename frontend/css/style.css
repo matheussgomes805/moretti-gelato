@@ -182,13 +182,33 @@ section h3 {
 
 table {
   width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: var(--fuente);
+  font-size: 14px;
 }
 
-thead th {
-  color: var(--fuente);
-  font-weight: 700;
-  font-size: 0.9em;
+thead {
+  background-color: var(--gris);
+}
+
+th,
+td {
+  padding: 12px;
   text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.eliminar-producto {
+  border: none;
+  background-color: transparent;
+  color: var(--rojo);
+  cursor: pointer;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nota-obligatorio {

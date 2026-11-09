@@ -11,26 +11,12 @@ const formato = document.getElementById("formato-producto");
 const cantidad = document.getElementById("cantidad-formato");
 const unidad = document.getElementById("unidad-medida");
 
-const productos = [];
-
-//PRODUCTOS DE PRUEBA
-productos.push(
-  {
-    nombre: "Helado de coco",
-    formato: "recipiente",
-    cantidad: 5,
-    unidad: "l",
-  },
-  {
-    nombre: "Leche entera",
-    formato: "botella",
-    cantidad: 1,
-    unidad: "l",
-  },
-);
+const productos = JSON.parse(localStorage.getItem("productos")) || [];
 
 //MOSTRAR PRODUCTOS EN LA TABLA
 function mostrarProductos() {
+  listaProductos.innerHTML = "";
+
   productos.forEach(function (producto) {
     listaProductos.insertAdjacentHTML(
       "beforeend",
@@ -38,7 +24,11 @@ function mostrarProductos() {
         <tr>
           <td>${producto.nombre}</td>
           <td>${producto.formato} (${producto.cantidad} ${producto.unidad})</td>
-          <td>Acciones</td>
+          <td>
+            <button class="eliminar-producto">
+            <span class="material-symbols-outlined">delete</span>
+            </button>
+          </td>
         </tr>
       `,
     );
@@ -47,6 +37,26 @@ function mostrarProductos() {
 
 if (listaProductos) {
   mostrarProductos();
+}
+
+if (listaProductos) {
+  listaProductos.addEventListener("click", function (event) {
+    if (event.target.closest(".eliminar-producto")) {
+      const fila = event.target.closest("tr");
+
+      const indice = Array.from(listaProductos.children).indexOf(fila);
+
+      const confirmar = confirm("¿Deseas eliminar este producto?");
+
+      if (confirmar) {
+        productos.splice(indice, 1);
+
+        localStorage.setItem("productos", JSON.stringify(productos));
+
+        mostrarProductos();
+      }
+    }
+  });
 }
 
 //ABRIR Y CERRAR EL MENU
@@ -107,8 +117,8 @@ if (formularioProducto) {
 
     productos.push(producto);
 
-    console.log(productos);
+    localStorage.setItem("productos", JSON.stringify(productos));
 
-    console.log("Formulario enviado");
+    window.location.href = "productos.html";
   });
 }

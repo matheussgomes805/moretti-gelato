@@ -53,7 +53,13 @@
       <form action="#" method="post" class="formulario-producto">
         <div class="campo">
           <label for="nombre">Nombre <span class="obligatorio">*</span></label>
-          <input type="text" name="nombre" id="nombre" required />
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            required
+            autocomplete="off"
+          />
         </div>
 
         <!-- (TIPO DE PRODUCTO)
@@ -122,7 +128,7 @@
                 <option value="ud">ud.</option>
                 <option value="kg">kg</option>
                 <option value="g">g</option>
-                <option value="L">l</option>
+                <option value="l">l</option>
                 <option value="ml">ml</option>
               </select>
               <span class="material-symbols-outlined">
