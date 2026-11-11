@@ -199,7 +199,18 @@ if (formularioMovimiento) {
       return;
     }
 
+    if (tipoMovimiento === "Entrada") {
+      productoSeleccionado.stock += unidadesMovimiento;
+    } else {
+      productoSeleccionado.stock -= unidadesMovimiento;
+    }
+
+    guardarProductos();
+
     movimientos.push(movimiento);
+
+    console.log("Movimientos registrados:", movimientos);
+    console.log("Stock actual:", productoSeleccionado.stock);
   });
 }
 
